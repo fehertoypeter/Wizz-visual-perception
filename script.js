@@ -236,7 +236,7 @@ function validateAnswer(userAnswer) {
   } else {
     // Show the correct answer and count of correctly matched instruments
     const errorMessage = document.createElement("div");
-    // errorMessage.innerText = `Correct answer: ${correctAnswer}. You got ${correctCount} right.`;
+    errorMessage.innerText = `Correct answer: ${correctAnswer}.`;
     errorMessage.style.color = "red";
     inputContainer.insertBefore(errorMessage, input);
 
@@ -271,3 +271,19 @@ function timerStart() {
     mask.style.animationPlayState = "paused"; // Megállítjuk az animációt
   }, 8000); // 8000 ms = 8 másodperc
 }
+
+// Információs ikon esemény kezelése
+document.getElementById("info-icon").addEventListener("click", () => {
+  const rulesContainer = document.getElementById("rules-container");
+  // Ellenőrizzük, hogy a szabálykönyv látható-e
+  if (rulesContainer.style.display === "none") {
+    rulesContainer.style.display = "block"; // Megjelenítjük
+  } else {
+    rulesContainer.style.display = "none"; // Elrejtjük
+  }
+});
+
+// Bezáró gomb esemény kezelése
+document.getElementById("close-rules").addEventListener("click", () => {
+  document.getElementById("rules-container").style.display = "none"; // Bezárjuk a szabálykönyvet
+});
