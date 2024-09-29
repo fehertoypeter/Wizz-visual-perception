@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random PNG Loader Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div class="toggle-container">
+        <div id="timer-container">
+          <div class="wrapper">
+            <div class="pie spinner"></div>
+            <div class="pie filler"></div>
+            <div class="mask"></div>
+          </div>
+        </div>
+        <span class="info-icon" id="info-icon">ℹ️</span>
+        <!-- Információs ikon -->
+      </div>
+
+      <div id="gameContainer">
+        <div id="instruction"></div>
+        <div id="imageContainer">
+          <div class="row" id="row1"></div>
+          <div class="row" id="row2"></div>
+          <div class="row" id="row3"></div>
+        </div>
+        <div id="guessContainer"></div>
+      </div>
+      <button id="newGameBtn">Új Játék</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
